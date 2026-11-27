@@ -1,14 +1,14 @@
 # Fitness & Habit Tracking Platform with Wearable-Style Time-Series Simulation
 
-DBMS mini-project. A fitness and habit tracker built on a **hybrid DBMS**:
+A fitness and habit tracker built on a **hybrid DBMS**:
 **MySQL** holds structured, related data (users, roles, profiles, plans, exercises, sessions, sets, goals, habits, schedules, coaches, subscriptions),
 and **Redis** (Memurai on Windows, or Redis in WSL) holds the high-volume and flexible data
 (simulated wearable time series, daily totals, journal entries, progress-photo metadata).
 
 | Team member | SRN |
 |---|---|
-| Nishkal M R | PES1UG24AM181 |
 | M Naga Sai Abhiram | PES1UG24AM151 |
+| Nishkal M R | PES1UG24AM181 |
 
 | Part | Technology | Folder |
 |---|---|---|
@@ -132,9 +132,3 @@ node database\show_users.js                  list users, roles and profiles
 node database\migrate.js                     upgrade an existing database
 node database\memurai_setup.js               test Redis/Memurai and write sample data
 ```
-
-## Limitations
-- Wearable values are simulated, and the anomaly rules are fixed thresholds, not medical advice.
-- Journal search filters the loaded entries in the browser; it is not a full-text or vector index.
-- Coaches are a fictional catalogue: there is no coach login, no messaging and no payment.
-- Redis data survives restarts only if Redis persistence (RDB/AOF) is enabled.
